@@ -8,6 +8,13 @@
 
 <h1>All Articles</h1>
 
+
+<p>
+  <% if @article.image.exists? %>
+      <%= image_tag @article.image.url %><br/>
+  <% end %>
+</p>
+
 <p><%= @article.body %></p>
 
 <%= render partial: 'comments/form' %>
